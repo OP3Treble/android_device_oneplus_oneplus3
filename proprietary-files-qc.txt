@@ -279,8 +279,8 @@ vendor/lib/libhdr_tm.so|9a7bd05a5ba74e53f3a573c13c9041bb376d309e
 vendor/lib64/libhdr_tm.so|b8d140f6ae4ac8e8c4f4762e7a44b85082b969df
 
 # Graphics (SDM) - from bardock-pro - OPM1.171019.011
-lib/libsdm-disp-apis.so|52fd2c3bd5d8e7d0181df6b48f367cd7b5e99a17
-lib64/libsdm-disp-apis.so|0ccaeceb8922a623fd6fba7461db763d03916646
+lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so|52fd2c3bd5d8e7d0181df6b48f367cd7b5e99a17
+lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so|0ccaeceb8922a623fd6fba7461db763d03916646
 vendor/lib/libscalar.so|8756b4c1242a0e1afd3602d12ecf335af5fe0d23
 vendor/lib/libsdm-color.so|7991d70201ade56cda55a3cb2dbed49124ef2fd0
 vendor/lib/libsdm-diag.so|2fadf88301c2334727516c8592e69ca373831927
@@ -295,8 +295,8 @@ vendor/lib64/libsdmextension.so|e71c53f1edf56dd8e8ead322caae4172f3163808
 vendor/lib64/libtinyxml2_1.so|8876b148e0246a770094b9abf7ee3e581d4ecd29
 
 # Graphics (qdutils HAL) - from bardock-pro - OPM1.171019.011
-lib/vendor.qti.hardware.qdutils_disp@1.0.so|a12b9e484ce9f7ab590b3fee91d320cba903badc
-lib64/vendor.qti.hardware.qdutils_disp@1.0.so|182817148907df624dcea5af27fd8d8256e02442
+lib/vendor.qti.hardware.qdutils_disp@1.0.so:vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|a12b9e484ce9f7ab590b3fee91d320cba903badc
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so:vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|182817148907df624dcea5af27fd8d8256e02442
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|90992c4c9a036a1964f6b90acd16fb3e5bb050ad
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|04bf21220673630ebaa4c8e7a84adbcdcf08f0dc
@@ -349,13 +349,13 @@ vendor/lib64/libperipheral_client.so
 
 # Postprocessing - from bardock-pro - OPM1.171019.011
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
-framework/com.qti.snapdragon.sdk.display.jar|cc367fe3c3525bc580f0d3ab41e43190dcee60dc
-lib/libsd_sdk_display.so|35f948fad2633f8cf2c004655e1c24fa4a2b4eaf
-lib/vendor.display.color@1.0.so|3ace5cf91dd9686a2250dfb7c50f883f81f38b74
-lib/vendor.display.postproc@1.0.so|d6069ae2c43121117acf976c79b1ce59735cfe3b
-lib64/libsd_sdk_display.so|8b79762452896eaa9ff97b7ae72646bfcf06423d
-lib64/vendor.display.color@1.0.so|ecd9bfd4e7f416218c172481a7192328f5c2a48f
-lib64/vendor.display.postproc@1.0.so|67e865d2c463d36c8eda8528ef4f36462b973eef
+framework/com.qti.snapdragon.sdk.display.jar:vendor/framework/com.qti.snapdragon.sdk.display.jar|cc367fe3c3525bc580f0d3ab41e43190dcee60dc
+lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so|35f948fad2633f8cf2c004655e1c24fa4a2b4eaf
+lib/vendor.display.color@1.0.so:vendor/lib/vendor.display.color@1.0.so|3ace5cf91dd9686a2250dfb7c50f883f81f38b74
+lib/vendor.display.postproc@1.0.so:vendor/lib/vendor.display.postproc@1.0.so|d6069ae2c43121117acf976c79b1ce59735cfe3b
+lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so|8b79762452896eaa9ff97b7ae72646bfcf06423d
+lib64/vendor.display.color@1.0.so:vendor/lib64/vendor.display.color@1.0.so|ecd9bfd4e7f416218c172481a7192328f5c2a48f
+lib64/vendor.display.postproc@1.0.so:vendor/lib64/vendor.display.postproc@1.0.so|67e865d2c463d36c8eda8528ef4f36462b973eef
 vendor/bin/hw/vendor.display.color@1.0-service|d425553ff762338a67e3d8b6b98db46357099657
 vendor/bin/mm-pp-dpps|25195ef9f617154420c9ce5d57499e671c4e6d6a
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -367,12 +367,12 @@ vendor/lib64/vendor.display.color@1.0_vendor.so|25c717f3004a5932dcbb2f55d5165c01
 vendor/lib64/vendor.display.postproc@1.0_vendor.so|503ef07fcfbbfcd8db096de79dfd822c8ada5e9b
 
 # QMI
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
-lib/libdiag_system.so
-lib/libqmi_cci_system.so
-lib64/libdiag_system.so
-lib64/libqmi_cci_system.so
+etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
+etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
+lib/libdiag_system.so:vendor/lib/libdiag_system.so
+lib/libqmi_cci_system.so:vendor/lib/libqmi_cci_system.so
+lib64/libdiag_system.so:vendor/lib64/libdiag_system.so
+lib64/libqmi_cci_system.so:vendor/lib64/libqmi_cci_system.so
 vendor/bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
@@ -408,20 +408,20 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
--app/datastatusnotification/datastatusnotification.apk
--app/embms/embms.apk
--app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/embms.xml
-etc/permissions/lpa.xml
-etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
-framework/embmslibrary.jar
--framework/qcnvitems.jar
--framework/qcrilhook.jar
+-app/datastatusnotification/datastatusnotification.apk:vendor/app/datastatusnotification/datastatusnotification.apk
+-app/embms/embms.apk:vendor/app/embms/embms.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk:vendor/app/QtiTelephonyService/QtiTelephonyService.apk
+etc/permissions/embms.xml:vendor/etc/permissions/embms.xml
+etc/permissions/lpa.xml:vendor/etc/permissions/lpa.xml
+etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml
+etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
+etc/permissions/telephonyservice.xml:vendor/etc/permissions/telephonyservice.xml
+framework/embmslibrary.jar:vendor/framework/embmslibrary.jar
+-framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
+-framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
 framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
-framework/QtiTelephonyServicelibrary.jar
-framework/uimlpalibrary.jar
+framework/QtiTelephonyServicelibrary.jar:vendor/framework/QtiTelephonyServicelibrary.jar
+framework/uimlpalibrary.jar:vendor/framework/uimlpalibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ipacm-diag
 vendor/bin/netmgrd
@@ -453,17 +453,17 @@ vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
 
 # Radio - IMS
--app/ims/ims.apk
--app/imssettings/imssettings.apk
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+-app/ims/ims.apk:vendor/app/ims/ims.apk
+-app/imssettings/imssettings.apk:vendor/app/imssettings/imssettings.apk
+lib64/lib-imscamera.so:vendor/lib64/lib-imscamera.so
+lib64/lib-imsvideocodec.so:vendor/lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so:vendor/lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so:vendor/lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so:vendor/lib64/imsvtutils.so
+lib64/libimscamera_jni.so:vendor/lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so:vendor/lib64/libimsmedia_jni.so
+lib64/librcc.so:vendor/lib64/librcc.so
+lib64/vendor.qti.imsrtpservice@1.0.so:vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon

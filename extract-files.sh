@@ -69,3 +69,25 @@ sed -i \
     -e 's/_ZN7qcamera17QCameraParameters21handleSuperResoultionEv/_ZN7qcamera17QCameraParameters21handleSuperResoultiSHIM/' \
     -e 's/_ZN7qcamera17QCameraParameters17isSuperResoultionEv/_ZN7qcamera17QCameraParameters17isSuperResoultiSHIM/' \
     "$CAMERA_HAL"
+
+function fix_vendor () {
+    sed -i \
+        "s/\/system\/$1\//\/vendor\/$1\//g" \
+        "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/"$2"
+}
+
+# Radio
+fix_vendor framework etc/permissions/cneapiclient.xml
+fix_vendor framework etc/permissions/com.qti.snapdragon.sdk.display.xml
+fix_vendor framework etc/permissions/embms.xml
+fix_vendor framework etc/permissions/lpa.xml
+fix_vendor framework etc/permissions/qcnvitems.xml
+fix_vendor framework etc/permissions/qcrilhook.xml
+fix_vendor framework etc/permissions/qti_libpermissions.xml
+fix_vendor framework etc/permissions/telephonyservice.xml
+
+# Camera
+fix_vendor etc vendor/lib/libmmcamera2_sensor_modules.so
+fix_vendor etc lib/libopcamera_native_modules.so
+fix_vendor lib vendor/lib64/libremosaiclib.so
+fix_vendor lib lib/libopcamera_native_modules.so
