@@ -206,29 +206,29 @@ on boot
     setprop persist.camera.HAL3.enabled 1
 
 #start camera server as daemon
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
 
 #fingerprint service
-service fingerprintd /system/vendor/bin/fingerprintd
+service fingerprintd /vendor/bin/fingerprintd
     class late_start
     user system
     group system
 
-service qfp-daemon /system/vendor/bin/qfp-daemon
+service qfp-daemon /vendor/bin/qfp-daemon
     class late_start
     user system
     group system drmrpc diag input
 
-#service fps_hal /system/vendor/bin/fingerprint.qcom
+#service fps_hal /vendor/bin/fingerprint.qcom
 #    class late_start
 #    user system
 #    group system input
 
-service qvrd /system/vendor/bin/qvrservice
+service qvrd /vendor/bin/qvrservice
     class late_start
     user system
     group system camera graphics
@@ -291,25 +291,25 @@ service qseecomd /vendor/bin/qseecomd
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service gamed /system/vendor/bin/gamed
+service gamed /vendor/bin/gamed
    class main
    user system
    group system
    disabled
    socket gamed seqpacket 0640 system system
 
-service seempd /system/vendor/bin/seempd
+service seempd /vendor/bin/seempd
    class late_start
    user system
    group system
    socket seempdw dgram 0666 system system
 
-service secotad /system/vendor/bin/secotad
+service secotad /vendor/bin/secotad
    class late_start
    user system
    group system
 
-#service mpdecision /system/vendor/bin/mpdecision --avg_comp
+#service mpdecision /vendor/bin/mpdecision --avg_comp
 #   user root
 #   disabled
 #
@@ -318,7 +318,7 @@ service secotad /system/vendor/bin/secotad
 #   group system
 #   disabled
 #
-service thermal-engine /system/vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/vendor/etc/thermal-engine.conf}
+service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/vendor/etc/thermal-engine.conf}
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -339,77 +339,77 @@ service thermal-engine /system/vendor/bin/thermal-engine -c ${sys.qcom.thermalcf
 #    class core
 #    oneshot
 #
-service time_daemon /system/vendor/bin/time_daemon
+service time_daemon /vendor/bin/time_daemon
    class late_start
    user root
    group root
 
-service adsprpcd /system/vendor/bin/adsprpcd
+service adsprpcd /vendor/bin/adsprpcd
    class main
    user media
    group media
 
-service audiod /system/vendor/bin/audiod
+service audiod /vendor/bin/audiod
    class late_start
    user system
    group system
 
 
-service usf_tester /system/vendor/bin/usf_tester
+service usf_tester /vendor/bin/usf_tester
     user system
     group system inet
     disabled
     oneshot
 
-service usf_epos /system/vendor/bin/usf_epos
+service usf_epos /vendor/bin/usf_epos
     class main
     user system
     group system inet
     disabled
     oneshot
 
-service usf_gesture /system/vendor/bin/usf_gesture
+service usf_gesture /vendor/bin/usf_gesture
     user system
     group system inet
     disabled
     oneshot
 
-service usf_sync_gesture /system/vendor/bin/usf_sync_gesture
+service usf_sync_gesture /vendor/bin/usf_sync_gesture
     user system
     group system inet audio
     disabled
     oneshot
 
-service usf_p2p /system/vendor/bin/usf_p2p
+service usf_p2p /vendor/bin/usf_p2p
     user system
     group system inet
     disabled
     oneshot
 
-service usf_hovering /system/vendor/bin/usf_hovering
+service usf_hovering /vendor/bin/usf_hovering
     user system
     group system inet
     disabled
     oneshot
 
-service usf_proximity /system/vendor/bin/usf_proximity
+service usf_proximity /vendor/bin/usf_proximity
     class late_start
     user system
     group system inet audio
 
-service usf_pairing /system/vendor/bin/usf_pairing
+service usf_pairing /vendor/bin/usf_pairing
     user system
     group system inet
     disabled
     oneshot
 
-service usf_sw_calib /system/vendor/bin/usf_sw_calib
+service usf_sw_calib /vendor/bin/usf_sw_calib
     user system
     group system inet
     disabled
     oneshot
 
-service usf-post-boot /system/vendor/bin/sh /system/etc/usf_post_boot.sh
+service usf-post-boot /vendor/bin/sh /system/etc/usf_post_boot.sh
     class late_start
     user root
     disabled
@@ -418,14 +418,14 @@ service usf-post-boot /system/vendor/bin/sh /system/etc/usf_post_boot.sh
 on property:init.svc.bootanim=stopped
     start usf-post-boot
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
+service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
     writepid /dev/cpuset/system-background/tasks
 
-service imsdatadaemon /system/vendor/bin/imsdatadaemon
+service imsdatadaemon /vendor/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -433,7 +433,7 @@ service imsdatadaemon /system/vendor/bin/imsdatadaemon
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service pd_mapper /system/vendor/bin/pd-mapper
+service pd_mapper /vendor/bin/pd-mapper
      class core
      disabled
 
@@ -446,20 +446,20 @@ on property:persist.sys.pd_enable=0
 
 #
 ## QCA1530 SoC late_start group trigger
-#service gnss-init /system/vendor/bin/gnss.qca1530.sh init
+#service gnss-init /vendor/bin/gnss.qca1530.sh init
 #   class late_start
 #   oneshot
 #
 on property:vendor.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
+service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
    class main
    user system
    group radio diag inet log
    disabled
 
-service vendor.imsrcsservice /system/vendor/bin/imsrcsd
+service vendor.imsrcsservice /vendor/bin/imsrcsd
    class main
    user system
    group radio diag inet log
@@ -470,13 +470,13 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
    start ims_rtp_daemon
    start vendor.imsrcsservice
 
-service dts_configurator /system/vendor/bin/dts_configurator
+service dts_configurator /vendor/bin/dts_configurator
     class late_start
     user system
     group system media audio
     oneshot
 
-service dtseagleservice /system/vendor/bin/dts_eagle_service
+service dtseagleservice /vendor/bin/dts_eagle_service
     class late_start
     user system
     group audio media
@@ -508,18 +508,18 @@ service tlocd /system/bin/tloc_daemon
     user system
     group drmrpc gps net_raw
 
-service energy-awareness /system/vendor/bin/energy-awareness
+service energy-awareness /vendor/bin/energy-awareness
     class main
     user root
     group system
     oneshot
 
-service hvdcp_opti /system/vendor/bin/hvdcp_opti
+service hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
 
-service mdtpd /system/vendor/bin/mdtpd
+service mdtpd /vendor/bin/mdtpd
    class late_start
    user root
    group system radio drmrpc
@@ -532,12 +532,12 @@ on charger
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     start hvdcp_opti
 
-service dhcpcd_eth0 /system/vendor/bin/dhcpcd -ABKLG
+service dhcpcd_eth0 /vendor/bin/dhcpcd -ABKLG
 	class late_start
 	disabled
 	oneshot
 
-service iprenew_eth0 /system/vendor/bin/dhcpcd -n
+service iprenew_eth0 /vendor/bin/dhcpcd -n
 	class late_start
 	disabled
 	oneshot
