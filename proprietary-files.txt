@@ -25,10 +25,8 @@ etc/camera/imx179_chromatix.xml:vendor/etc/camera/imx179_chromatix.xml
 etc/camera/imx298_chromatix.xml:vendor/etc/camera/imx298_chromatix.xml
 etc/camera/s5k3p8_chromatix.xml:vendor/etc/camera/s5k3p8_chromatix.xml
 etc/camera/s5k3p8sp_chromatix.xml:vendor/etc/camera/s5k3p8sp_chromatix.xml
-lib/libqomx_core.so:vendor/lib/libqomx_core.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 vendor/bin/mm-qcamera-daemon
-vendor/lib/hw/camera.msm8996.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
@@ -51,7 +49,6 @@ vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imx179.so
 vendor/lib/libmmcamera_imx298.so
-vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_paaf_lib.so
@@ -88,7 +85,6 @@ vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
