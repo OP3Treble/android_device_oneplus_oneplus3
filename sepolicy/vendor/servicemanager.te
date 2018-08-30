@@ -1,0 +1,7 @@
+allow servicemanager mm-qcamerad:dir search;
+allow servicemanager mm-qcamerad:file { open read };
+allow servicemanager mm-qcamerad:process getattr;
+allow servicemanager remosaic_daemon:dir search;
+allow servicemanager remosaic_daemon:file { open read };
+allow servicemanager remosaic_daemon:process getattr;
+allow servicemanager vendor_file:file getattr;

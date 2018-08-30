@@ -1,4 +1,4 @@
-type remosaic_daemon, domain;
+type remosaic_daemon, domain, binder_in_vendor_violators;
 type remosaic_daemon_exec, exec_type, vendor_file_type, file_type;
 
 #Allow for transition from init domain to remosaic_daemon

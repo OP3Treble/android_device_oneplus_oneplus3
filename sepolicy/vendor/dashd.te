@@ -2,7 +2,7 @@
 
 # dashd seclabel is specified in init.rc since
 # it lives in the rootfs and has no unique file type.
-type dashd, domain;
+type dashd, domain, coredomain;
 type dashd_exec, exec_type, file_type;
 
 typeattribute dashd coredomain;

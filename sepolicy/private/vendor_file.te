@@ -1,0 +1,3 @@
+allow hal_allocator_default vendor_file:file getattr;
+allow storaged vendor_file:file getattr;
+allow sysinit vendor_file:file getattr;

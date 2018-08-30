@@ -9,9 +9,6 @@
 /dev/fpc1020                                                    u:object_r:fpc1020_device:s0
 /dev/dash                                                       u:object_r:dash_device:s0
 
-# HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@2\.4-service\.oneplus3       u:object_r:hal_camera_default_exec:s0
-
 # Ril
 /data/oemnvitems(/.*)?                                          u:object_r:vendor_radio_data_file:s0
 
@@ -24,5 +21,8 @@
 /sys/devices/virtual/graphics/fb0/srgb                          u:object_r:sysfs_livedisplay:s0
 
 # Binaries
-/system/bin/ifaadaemon                                          u:object_r:ifaadaemon_exec:s0
 /(vendor|system/vendor)/bin/remosaic_daemon                     u:object_r:remosaic_daemon_exec:s0
+
+# Camera
+/data/misc/camera/cam_socket[0-9]                               u:object_r:camera_socket:s0
+/data/vendor/camera/cam_socket[0-9]                             u:object_r:camera_socket:s0
