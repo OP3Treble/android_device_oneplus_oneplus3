@@ -20,7 +20,8 @@ include $(CLEAR_VARS)
 LOCAL_CFLAGS := -Wno-unused-parameter
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := thermal.c
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_HEADER_LIBRARIES += libhardware_headers
+LOCAL_SHARED_LIBRARIES := liblog libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := qcom
 LOCAL_PROPRIETARY_MODULE := true
