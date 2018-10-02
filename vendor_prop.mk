@@ -92,4 +92,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.display.paneltype=1 \
     ro.qualcomm.foss=1 \
     config.foss.xml=1 \
-    config.foss.path=/vendor/etc/FOSSConfig.xml
+    config.foss.path=/vendor/etc/FOSSConfig.xml \
+    qemu.hw.mainkeys=1
